@@ -1,0 +1,13 @@
+language: go
+
+git:
+  depth: 3
+  quiet: true
+
+install:
+  - go mod vendor
+go:
+  - 1.14.2
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
